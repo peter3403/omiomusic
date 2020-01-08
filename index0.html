@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage1</title>
+    <link href="css project/style2.css" type="text/css" rel="stylesheet" />
+    <link href="swiper.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+    <div class="bg">
+        <div class="box1"></div>
+
+        <header>
+
+            <a href="index0.html"><img src="image/omio2.png" class="omio"></a>
+            
+            <ul>
+                <bottom class="Home">
+                    <a href="index0.html" style="text-decoration:none;">首頁</a>
+                </bottom>
+                <bottom class="Work">
+                    <a href="index1.html" style="text-decoration:none;">音樂情報</a>
+                </bottom>
+                <bottom class="About">
+                    <a href="index2.html" style="text-decoration:none;">關於我們</a>
+                </bottom>
+            </ul>
+        </header>
+        <div class="middlebar"></div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image/AMAZ.png" class="amaz">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="image/ashing.png" class="ash">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="image/世界盡頭1.png" class="end">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+        <article class="main-area">
+
+            <div class="new_song">速爆新歌</div>
+            <img src="image/coldplay.jpg" class="coldplay">
+            <img src="image/怨.jpg" class="hotdog">
+            <img src="image/hong kong (1).png" class="hong_kong">
+            <img src="image/young and beautiful.jpg" class="yb">
+
+
+            <div class="style">曲風</div>
+            <div class="container1">
+                <img src="image/wowwww.jpg" class="wow">
+                <div class="overlay1">華語</div>
+            </div>
+
+            <div class="container2">
+                <img src="image/party.jpg" class="party">
+                <div class="overlay2">日文</div>
+            </div>
+
+            <div class="container3">
+                <img src="image/nightclub.png" class="night">
+                <div class="overlay3">西洋</div>
+            </div>
+
+            <div class="container4">
+                <img src="image/singer-2.jpg" class="sing">
+                <div class="overlay4">抒情</div>
+            </div>
+
+
+            <div class="ranking">排行榜</div>
+            <img src="image/Girl.png" class="girl">
+            <img src="image/Demon slayer.png" class="demon">
+            <img src="image/weather.png" class="weather">
+            <img src="image/waste.png" class="waste">
+
+        </article>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!-- pad foot -->
+        <div class="pbox">
+            <bottom class="HomeF">
+                <a href="index0.html" style="text-decoration:none;">首頁</a>
+            </bottom>
+            <bottom class="WorkF">
+                <a href="index1.html" style="text-decoration:none;">音樂情報</a>
+            </bottom>
+            <bottom class="AboutF">
+                <a href="index2.html" style="text-decoration:none;">關於我們</a>
+            </bottom>
+        </div>
+        <div class="fbbox"></div>
+    </div>
+
+    <footer>
+        <div class="box2"></div>
+        <div class="Copyright">
+            隱私條款 | 條款及細則 | 2019 © OMIO
+        </div>
+
+        <div class="smallbox1">繁體中文</div>
+        <div class="smallbox2">English</div>
+
+        <div class="social_media">加入社群</div>
+        <div>          
+            <a href="https://m.facebook.com/omiomusic/" target="_blank"><img src="image/fb.png" class="fb"></a>
+            <a href="https://www.youtube.com/channel/UChNqKKo9tAbj3v2hCkcPFOQ?fbclid=IwAR0oq2gveQdJ4_8SmLBQb8FJOq2ORYy6UTlzhJh--FcYtz-AUtrJXTt8Pds"
+            target="_blank"><img src="image/youtube.png" class="youtube"></a>
+            <a href="https://www.instagram.com/omio_music/" target="_blank"><img src="image/instagram.png"
+                class="instagram"></a>            
+        </div>
+        
+
+    </footer>
+
+</body>
+
+</html>
